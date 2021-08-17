@@ -1,0 +1,712 @@
+@import "global"
+
+@import "fonts"
+
+@import "vars"
+
+@import "animations"
+
+
+	
+	
+.header_slider
+	&-item
+		height: 100vh
+		background-image: url(images/header-bg.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+
+.slider-item_info
+	position: absolute
+	right: 80px
+	bottom: 100px
+	text-align: right
+	color: #ffffff
+.slider-item_info-suptitle
+	margin-bottom: 5px
+	
+.slider-item_info-suptext
+	margin-bottom: 8px
+
+.slider-item_info-title
+	font-style: normal
+	font-weight: 800
+	font-size: 70px
+	line-height: 86px
+	margin-bottom: 12px
+
+.slider-item_info-text 
+	font-size: 35px
+	margin-bottom: 8px
+
+.slider-arrows
+	position: absolute
+	top: 40px
+	right: 120px
+	cursor: pointer
+	z-index: 5
+
+
+.slider-arrows_left
+	right: 165px
+
+.slider-dotshead
+	position: absolute
+	right: 70px
+	bottom: 23px
+	max-width: 920px
+	width: 100%
+	.slick-current
+		.dots-box
+			border-top-color: $blue
+			cursor: not-allowed
+			&_number
+				cursor: not-allowed
+			&_name
+				cursor: not-allowed
+	.slider-dots_item
+		margin: 0 20px
+		&:last-child
+			margin-right: 0
+			
+		
+.dots-box
+	width: 200px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 35px
+	border-top: 4px solid #fff
+	padding-top: 11px
+	cursor: pointer
+	&_number
+		font-weight: 800
+		font-size: 23px
+		line-height: 34px
+		cursor: pointer
+	&_name
+		font-weight: 300
+		line-height: 19px
+		cursor: pointer
+
+.header_asside
+	position: absolute
+	z-index: 5
+	top: 0
+	left: 0
+	border-right: 1px solid #979797
+	height: 100vh
+	width: 6.5vw
+.header_title
+	font-weight: 800
+	font-size: 165px
+	line-height: 78%
+	text-transform: uppercase
+	opacity: 0.07
+	position: absolute
+	z-index: 3
+	top: 0
+	left: 0
+.logo
+	img
+		width: 6.5vw
+		height: auto
+		margin-bottom: 20px
+.menu
+	&_list
+		display: block
+		text-align: center
+		li
+			&:nth-child(1)
+				&:hover
+					& img
+						transform: translateX(-20%)
+					& span
+						transform: translateX(10%)
+			
+			&:nth-child(2)
+				&:hover
+					& img
+						transform: translateX(20%)
+					& span
+						transform: translateX(-10%)
+			
+			&:nth-child(3)
+				&:hover
+					& img
+						transform: translateX(-20%)
+					& span
+						transform: translateX(10%)
+			
+			&:nth-child(4)
+				&:hover
+					& img
+						transform: translateX(20%)
+					& span
+						transform: translateX(-10%)
+		a
+			color: #fff
+			text-decoration: none
+			img
+				width: 75%
+				transition: transform 1s
+				cursor: pointer
+				height: auto
+				opacity: 0.7		
+			
+			span
+				display: block
+				cursor: pointer
+				font-family: Fira Sans
+				font-weight: 400
+				font-size: 12px
+				line-height: 117%
+				letter-spacing: 3px
+				padding-top: 6px
+				padding-bottom: 35px
+				transition: transform 1s
+
+.header_search
+	text-align: center
+	img
+		cursor: pointer
+		margin-bottom: 20px
+
+.header_date
+	font-weight: 800
+	font-size: 54px
+	text-align: center
+	line-height: 28px
+	span
+		font-weight: 300
+		font-size: 16px
+		letter-spacing: 1.8px
+.header_location
+	opacity: 0.7
+	text-align: center
+	margin-top: 25px
+.slider-item_info-link
+	img
+		cursor: not-allowed
+
+.header_map
+	position: absolute
+	right: -50px
+	top: 0
+	z-index: 3
+	svg
+		height: 60vh
+
+
+.header_arrows-bottom
+	position: absolute
+	left: 210px
+	bottom: 27px
+	z-index: 3
+	img
+		cursor: pointer
+
+#north_shore-text
+	opacity: 1
+#north_shore-item
+	opacity: 0
+#north_shore-item-big
+	opacity: 1
+
+#west_shore-road,
+#south_shore-road,
+#east_shore-road,
+	opacity: 0
+#west_shore-item,
+#south_shore-item,
+#east_shore-item,
+	opacity: 0
+#west_shore-item-big,
+#south_shore-item-big,
+#east_shore-item-big,
+	opacity: 0
+#west_shore-text,
+#south_shore-text,
+#east_shore-text,
+	opacity: 0
+
+.slider-item-info
+	&:focus
+		border: none
+
+.surf_subtitle
+	text-align: right
+	padding-right: 80px
+	margin-top: -70px
+	position: relative
+	img
+		position: absolute
+		right: 0
+		top: -80px
+.surf-slider
+	padding-top: 200px
+	.slider-arrows
+		top: 150px
+		opacity: 0.25
+	.surf-box
+		&:nth-child(4n + 1)
+			transform: translateX(400px)
+
+			margin-top: 32px
+		&:nth-child(4n + 2)
+			transform: translateX(400px)
+		&:nth-child(4n + 3)
+			margin-top: 89px
+			transform: translateX(400px)
+
+		&:nth-child(4n + 4)
+			transform: translateX(400px)
+
+	.slick-current
+		z-index: 50
+		.surf-box_inner-btn
+			z-index: 5
+			opacity: 1	
+		.surf-box_inner-mask
+			background-color: rgba(#1C2121, 0.3 )
+			cursor: default
+
+.surf-box
+	position: relative
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+	&_inner
+		min-height: 650px
+		position: relative
+		transition: all .25s
+
+		
+.surf-box_inner-mask
+	background-color: rgba(#1C2121, 0.85 )
+	cursor: pointer
+	transition: all .5s
+
+	&:hover
+		background-color: rgba(#1C2121, 0.75)
+
+.surf-box_inner-title
+	font-weight: 800
+	font-size: 40px
+	line-height: 36px
+	padding: 72px 0 0 40px
+	width: 140px
+	text-transform: uppercase
+
+.surf-box_inner-location
+	font-size: 18px
+	width: 0
+	line-height: 22px
+	position: absolute
+	bottom: 150px
+	left: 40px
+	text-transform: uppercase
+	color: #FFFFFF
+	transform: rotate(-90deg)
+	white-space: nowrap
+
+.surf-box_inner-btn
+	font-weight: 800
+	font-size: 40px
+	position: absolute
+	bottom: 8px
+	text-align: center
+	left: 0
+	right: 0
+	text-transform: uppercase
+	z-index: -1
+	opacity: 0
+	transition: opacity .5s
+
+.surf-slider
+	.slick-slide
+		margin: 0 -20px
+
+.slider-map
+	text-transform: uppercase
+	max-width: 80%
+	margin: 0 auto
+	min-height: 635px
+	background-image: url(images/world-map-dots.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	.slick-list
+		min-height: 635px
+		overflow: visible
+		.slick-current
+			.slider-dots_content
+				position: relative
+				top: -245px
+				left: -135px
+				background-color: rgba(#000000, .7)
+				border-radius: 6px
+				opacity: 1
+				width: 300px
+				padding: 28px 31px 0 32px
+				visibility: visible
+
+			.slider-dots_tear
+				height: 25px
+				opacity: 1
+				
+.slider-dots_content-row
+	display: flex
+	justify-content: space-between
+	padding-bottom: 30px
+.slider-dots_content-item
+	text-align: center
+	img
+		margin: 0 auto
+		margin-bottom: 7px
+		justify-content: space-between
+.slider-dots_content-number
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 23px;
+
+.slider-dots_content-name
+	font-weight: 300;
+	font-size: 10px;
+	line-height: 12px;
+
+.slider-dots_content-title
+	font-weight: 800
+	font-size: 18px
+	line-height: 26px
+	padding-bottom: 8px
+	margin-bottom: 8px
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		background-color: $blue
+		width: 80px
+		height: 1px
+		bottom: 0
+
+.slider-dots_content-link
+	padding-top: 6px
+
+.slider-dots_content-subtitle
+	font-size: 16px
+	line-height: 19px
+	text-transform: capitalize
+
+.slider-dots_tear 
+	opacity: 0
+	width: 25px
+	height: 5px
+	border-radius: 0 50% 50% 50%
+	transform: rotate(45deg)
+	margin-top: 20px
+	background-color: $blue
+	transition: all .25s ease-in-out
+
+.slider-dots_circle
+	width: 24px
+	height: 24px
+	background-color: $blue
+	border-radius: 50%
+	box-shadow: 0px 0px 30px rgba(74, 246, 205, 0.837777)
+
+.slider-dots_content
+	opacity: 0
+	visibility: hidden
+	transition: opacity .25s ease-in-out
+
+.slider-dots
+	position: absolute
+
+.slider-dots--1
+	top: 270px
+	left: 168px
+
+
+.slider-dots--2
+	top: 443px
+	left: 1054px
+	.slider-dots_content
+		transform: translate(-172px, 150px)
+	.slider-dots_tear
+		transform: rotate(-45deg)
+
+.slider-dots--3
+	top: 320px
+	left: 970px
+	.slider-dots_content
+		position: relative
+		top: 0
+		left: 0
+
+.slider-dots--4
+	top: 200px
+	left: 555px
+
+.slider-dots--5
+	top: 270px
+	left: 168px
+
+.slider-dots--6
+	top: 443px
+	left: 1054px
+	.slider-dots_content
+		transform: translate(-172px, 150px)
+	.slider-dots_tear
+		transform: rotate(-45deg)
+
+.slider-dots--7
+	top: 320px
+	left: 970px
+
+.slider-dots--8
+	top: 200px
+	left: 555px
+
+.holder
+	text-transform: uppercase
+	background-image: url(images/travel-bg.png)
+	background-position: bottom right
+	background-repeat: no-repeat
+
+	.btn
+		margin-bottom: 150px
+	.slider-arrows
+		opacity: 0.25
+		top: 225px
+		margin-right: -40px
+	
+	&.sleep
+		background-image: url(images/sleep-bg.png)
+		margin-bottom: 250px
+
+
+.holder-slider
+	&_descr
+		margin-top: -230px
+		padding: 160px 0 0 132px
+		min-height: 320px
+		background-repeat: no-repeat
+		background-position: right center
+	&_head
+		background-repeat: no-repeat
+		background-position: top left
+		min-height: 780px
+	&_subtitle
+		text-align: right
+		padding: 132px 80px 0 0		
+.holder-slider_info
+	display: flex
+	justify-content: space-around
+
+.holder-slider_info-item
+	min-height: 200px
+	min-width: 250px
+	margin-bottom: 66px
+	position: relative
+	img
+		user-select: none
+		z-index: 1000
+		overflow: visible
+		transition: filter .5s ease-in-out
+	span
+		display: inline-block
+
+				
+
+.holder-slider_info-subtitle
+	text-align: right
+	position: absolute
+	font-size: 18px
+	line-height: 22px
+	letter-spacing: 8px
+	opacity: 0.5
+	text-align: right
+	transform: rotate(-90deg)
+	top: 97px
+	left: -97px
+	width: 200px
+	height: 0
+	white-space: nowrap
+	
+.holder-slider_info-title
+	text-align: right
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 36px;
+	padding-left: 40px
+	p
+		font-weight: 400
+		font-size: 14px
+		line-height: 36px
+		text-align: right
+		opacity: 0.75
+		letter-spacing: 5.25px
+
+
+
+.calc
+	text-align: right
+	margin-top: 15px
+	img
+		display: inline-block
+		vertical-align: middle
+		width: 14px
+		height: 14px
+		cursor: pointer
+		&:first-child
+			margin-top: 1px
+			margin-right: 15px
+			
+.shop
+	
+	font-weight: 800
+	background-image: url(images/shop-bg.png)
+	background-repeat: no-repeat
+	background-position: right center
+	.slider-arrows
+		opacity: 0.25
+	.headline-right
+		padding-bottom: 7px
+		
+	.btn
+		margin: 64px 0 0
+.star-list
+	margin-top: 27px
+.shop_slider
+	padding-left: 132px
+	&-info
+		max-width: 480px
+		margin-right: 40px
+		width: 100%
+		padding-top: 166px
+	&-inner
+		display: flex
+.shop_slider-price
+	font-size: 32px
+	sup
+		font-size: 18px
+
+.shop_slider-content
+	display: flex
+	align-items: flex-end
+
+.shop_extras
+	padding-left: 150px
+	&-inner
+		display: flex
+		text-align: center
+	&-title
+		font-size: 28px
+		margin-bottom: 25px
+		line-height: 40px
+
+	&-box
+		margin-right: 57px
+	&-img
+		min-height: 105px
+		display: flex
+		align-items: center
+		margin-bottom: 35px
+		justify-content: center
+	&-name
+		line-height: 22px
+		letter-spacing: 8px;
+		font-weight: normal
+		opacity: 0.5
+		margin-bottom: 16px
+	&-price
+		font-size: 18px
+		line-height: 40px
+
+
+.surfboard
+	position: relative
+	&-box
+		position: absolute
+		right: 40px
+		top: 215px
+		&_circle
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			position: relative
+			background-color: #fff
+			cursor: pointer
+			&.active
+				& + .surfboard-box_content
+					opacity: 1
+
+
+
+				.circle-row
+					transform: translate(-50%, -50%) rotate(0deg)
+
+
+.circle-row
+	cursor: pointer
+	background-color: $blue
+	position: absolute
+	width: 12px
+	height: 2px
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%) rotate(0deg)
+	transition: transform .4s ease-in-out
+	& + .circle-row
+		transform: translate(-50%, -50%) rotate(90deg)
+
+
+.surfboard-box_content
+	margin-top: -34px
+	margin-left: 20px
+	opacity: 0
+	position: absolute
+	width: 359px
+	line-height: 24px
+	font-size: 24px
+	padding-left: 124px
+	transition: opacity .4s ease-in-out
+	&::before
+		content: ""
+		position: absolute
+		background-color: rgba(#fff, .5)
+		width: 80px
+		height: 1px
+		left: 20px
+		top: 50%
+
+.surfboard_position--2
+	top: 320px
+	left: 0
+.surfboard_position--3
+	top: 610px
+	left: 52px
+	.surfboard-box_content
+		width: 300px
+
+footer
+	margin: 284px auto 34px
+	.btn
+		span
+			padding: 17px 17px 15px
+			&::after
+				display: none
+
+
+.footer_copy
+	text-transform: uppercase
+	margin-top: 27px
+	text-align: center
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 14px;
+	opacity: .5
+	letter-spacing: 1.05px;
